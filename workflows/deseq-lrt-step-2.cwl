@@ -446,6 +446,7 @@ steps:
   make_volcano_plot:
     run: ../tools/volcano-plot.cwl
     scatter: diff_expr_file
+    scatterMethod: dotproduct
     in:
       diff_expr_file: deseq/diff_expr_file
       x_axis_column:

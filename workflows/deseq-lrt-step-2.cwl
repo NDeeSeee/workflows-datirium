@@ -21,7 +21,7 @@ inputs:
     sd:preview:
       position: 1
 
-  contrast_indices:
+  test_test_contrast_indices:
     type: string
     label: "Comma-separated list of integers representing contrast indices"
     default: "1,5,13 (Example of list of 3 contrasts)"
@@ -252,7 +252,7 @@ steps:
     in:
       dsq_obj_data: dsq_obj_data
       batchcorrection: batchcorrection
-      contrast_indices: contrast_indices
+      test_contrast_indices: test_contrast_indices
       fdr: fdr
       lfcthreshold: lfcthreshold
       use_lfc_thresh: use_lfc_thresh

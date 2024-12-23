@@ -21,7 +21,7 @@ inputs:
     sd:preview:
       position: 1
 
-  test_contrast_indices:
+  contrast_indices:
     type: string
     label: "Comma-separated list of integers representing contrast indices"
     default: "1,5,13 (Example of list of 3 contrasts)"

@@ -24,10 +24,10 @@ inputs:
     default: "none"
     doc: "Batch correction method. Default: none"
 
-  test_contrast_indices:
+  contrast_indices:
     type: string
     inputBinding:
-      prefix: "--test_contrast_indices"
+      prefix: "--contrast_indices"
     doc: "Comma-separated list of integers representing contrast indices (e.g., 1,2,3)"
 
   fdr:
@@ -213,7 +213,7 @@ doc: |
   - `contrasts_rds`: RDS file containing the contrasts list from step 1.
   - `dsq_wald_rds`: RDS file containing the DESeq2 object from the Wald test in step 1.
   - `metadata_rds`: RDS file containing the metadata from step 1.
-  - `test_contrast_indices`: Comma-separated list of integers representing contrast indices (e.g., 1,2,3).
+  - `contrast_indices`: Comma-separated list of integers representing contrast indices (e.g., 1,2,3).
   - `fdr`: Adjusted p-value (FDR) threshold for significance. Default: 0.1.
   - `lfcthreshold`: Log2 fold change threshold for significance. Default: 0.59.
   - `regulation`: Direction of differential expression comparison ('both', 'up', 'down'). Default: 'both'.

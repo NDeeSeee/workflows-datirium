@@ -112,6 +112,21 @@ inputs:
       exploratory visualization part of the analysis. Default: do not run
       clustering
 
+
+  k_hopach:
+    type: int?
+    inputBinding:
+      prefix: "--k"
+    default: 3
+    doc: "Number of levels (depth) for Hopach clustering: min - 1, max - 15. Default: 3."
+
+  kmax_hopach:
+    type: int?
+    inputBinding:
+      prefix: "--kmax"
+    default: 5
+    doc: "Maximum number of clusters at each level for Hopach clustering: min - 2, max - 9. Default: 5."
+
   output_prefix:
     type: string?
     inputBinding:

@@ -135,7 +135,7 @@ inputs:
   k_hopach:
     type: int?
     default: 3
-    label: "Number of levels for Hopach clustering"
+    label: "Number of levels for HOPACH clustering"
     doc: "Number of levels (depth) for Hopach clustering: min - 1, max - 15. Default: 3."
     'sd:layout':
       advanced: true
@@ -143,7 +143,7 @@ inputs:
   kmax_hopach:
     type: int?
     default: 5
-    label: "Maximum number of clusters at each level for Hopach clustering"
+    label: "Maximum number of clusters at each level for HOPACH clustering"
     doc: "Maximum number of clusters at each level for Hopach clustering: min - 2, max - 9. Default: 5."
     'sd:layout':
       advanced: true

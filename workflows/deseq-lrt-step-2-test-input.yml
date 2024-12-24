@@ -1,6 +1,8 @@
 use_lfc_thresh: true
 threads: 1
 test_mode: true
+k_hopach: 3
+kmax_hopach: 5
 regulation: both
 lfcthreshold: 0
 group_by: genes

@@ -76,8 +76,6 @@ inputs:
 
   k_hopach:
     type: int?
-    inputBinding:
-      prefix: "--k"
     default: 3
     label: "Number of levels for Hopach clustering"
     doc: "Number of levels (depth) for Hopach clustering: min - 1, max - 15. Default: 3."
@@ -86,8 +84,6 @@ inputs:
 
   kmax_hopach:
     type: int?
-    inputBinding:
-      prefix: "--kmax"
     default: 5
     label: "Maximum number of clusters at each level for Hopach clustering"
     doc: "Maximum number of clusters at each level for Hopach clustering: min - 2, max - 9. Default: 5."

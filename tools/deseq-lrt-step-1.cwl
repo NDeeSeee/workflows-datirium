@@ -10,7 +10,7 @@ hints:
 
 inputs:
 
-  expression_files:
+  expression_files_grouped:
     type: File[]
     inputBinding:
       position: 1

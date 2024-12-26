@@ -1,4 +1,4 @@
-expression_files:
+test_expression_files:
   - class: File
     path: "/Users/biocode/Documents/GitHub/CCHMC/BarskiiLab/workflows/tests/data/dm3_chr4/main_inputs/geep/AFOS_LRT_step_1_test/s1m2_TCM5HGFP.isoforms.csv"
   - class: File

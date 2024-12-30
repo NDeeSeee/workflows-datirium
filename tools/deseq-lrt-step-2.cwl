@@ -131,22 +131,22 @@ outputs:
   diff_expr_files:
     type: File[]
     outputBinding:
-      glob: "*_contrast_*_gene_exp_table.tsv"
+      glob: "*_gene_exp_table.tsv"
 
   mds_plots_html:
     type: File
     outputBinding:
-      glob: "*_mds_plot.html"
+      glob: "mds_plot.html"
 
   counts_all_gct:
     type: File
     outputBinding:
-      glob: "*_counts_all.gct"
+      glob: "counts_all.gct"
 
   counts_filtered_gct:
     type: File
     outputBinding:
-      glob: "*_counts_filtered.gct"
+      glob: "counts_filtered.gct"
 
   stdout_log:
     type: stdout
@@ -155,8 +155,8 @@ outputs:
     type: stderr
 
 baseCommand: [ run_deseq_lrt_step_2.R ]
-stdout: deseq_step2_stdout.log
-stderr: deseq_step2_stderr.log
+stdout: deseq_lrt_step_2_stdout.log
+stderr: deseq_lrt_step_2_stderr.log
 
 $namespaces:
   s: http://schema.org/

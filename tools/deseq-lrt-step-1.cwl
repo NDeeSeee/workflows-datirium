@@ -132,7 +132,7 @@ inputs:
     inputBinding:
       position: 10
       prefix: "--output"
-    default: "./deseq"
+    default: "./deseq_lrt_step_1"
     doc: "Output prefix for generated files"
 
   threads:
@@ -205,8 +205,8 @@ outputs:
     type: stderr
 
 baseCommand: [ run_deseq_lrt_step_1.R ]
-stdout: deseq_stdout.log
-stderr: deseq_stderr.log
+stdout: deseq_lrt_step_1_stdout.log
+stderr: deseq_lrt_step_1_stderr.log
 
 $namespaces:
   s: http://schema.org/

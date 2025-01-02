@@ -27,7 +27,7 @@ inputs:
     default: "1,5,13 (Example of list of 3 contrasts)"
     doc: "Comma-separated list of integers representing contrast indices (e.g., 1,5,13)"
 
-  fdr:
+  fdr_cutoff:
     type: float?
     default: 0.1
     label: "Maximum P-adjusted to show features in the exploratory visualization analysis"
@@ -249,7 +249,7 @@ steps:
       dsq_obj_data: dsq_obj_data
       batchcorrection: batchcorrection
       contrast_indices: contrast_indices
-      fdr: fdr
+      fdr_cutoff: fdr_cutoff
       lfcthreshold: lfcthreshold
       use_lfc_thresh: use_lfc_thresh
       cluster_method: cluster_method

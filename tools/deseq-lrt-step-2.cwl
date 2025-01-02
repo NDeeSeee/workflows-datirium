@@ -30,7 +30,7 @@ inputs:
       prefix: "--contrast_indices"
     doc: "Comma-separated list of integers representing contrast indices (e.g., 1,2,3)"
 
-  fdr:
+  fdr_cutoff:
     type: float?
     inputBinding:
       prefix: "--fdr"

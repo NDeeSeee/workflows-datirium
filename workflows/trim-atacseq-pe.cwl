@@ -34,7 +34,6 @@ inputs:
     type: File
     "sd:upstreamSource": "genome_indices/annotation"
     label: "Annotation file"
-    format: "http://edamontology.org/format_3475"
     doc: "Tab-separated annotation file"
 
   genome_size:
@@ -47,7 +46,6 @@ inputs:
     type: File
     "sd:upstreamSource": "genome_indices/chrom_length"
     label: "Chromosomes length file"
-    format: "http://edamontology.org/format_2330"
     doc: "Chromosomes length file"
 
   fastq_file_upstream:
@@ -56,7 +54,6 @@ inputs:
     - type: array
       items: File
     label: "FASTQ read 1 input file(s)"
-    format: "http://edamontology.org/format_1930"
     doc: "Reads data in a FASTQ format, received after paired end sequencing"
 
   fastq_file_downstream:
@@ -65,7 +62,6 @@ inputs:
     - type: array
       items: File
     label: "FASTQ read 2 input file(s)"
-    format: "http://edamontology.org/format_1930"
     doc: "Reads data in a FASTQ format, received after paired end sequencing"
 
   exp_fragment_size:
@@ -169,7 +165,6 @@ outputs:
     type:
       - "null"
       - File[]
-    format: "http://edamontology.org/format_1930"
     label: "Unaligned FASTQ file(s)"
     doc: "Unaligned FASTQ file(s)"
     outputSource: bowtie_aligner/unaligned_fastq
@@ -178,14 +173,12 @@ outputs:
     type:
       - "null"
       - File[]
-    format: "http://edamontology.org/format_1930"
     label: "Multimapped FASTQ file(s)"
     doc: "Multimapped FASTQ file(s)"
     outputSource: bowtie_aligner/multimapped_fastq
 
   bigwig:
     type: File
-    format: "http://edamontology.org/format_3006"
     label: "BigWig file"
     doc: "Generated BigWig file"
     outputSource: convert_bedgraph_to_bigwig/bigwig_file
@@ -200,7 +193,6 @@ outputs:
   fastx_statistics_upstream:
     type: File
     label: "FASTQ 1 statistics"
-    format: "http://edamontology.org/format_2330"
     doc: "fastx_quality_stats generated FASTQ 1 quality statistics file"
     outputSource: fastx_quality_stats_upstream/statistics_file
     "sd:visualPlugins":
@@ -222,7 +214,6 @@ outputs:
   fastx_statistics_downstream:
     type: File
     label: "FASTQ 2 statistics"
-    format: "http://edamontology.org/format_2330"
     doc: "fastx_quality_stats generated FASTQ 2 quality statistics file"
     outputSource: fastx_quality_stats_downstream/statistics_file
     "sd:visualPlugins":
@@ -244,21 +235,18 @@ outputs:
   bowtie_log:
     type: File
     label: "BOWTIE alignment log"
-    format: "http://edamontology.org/format_2330"
     doc: "BOWTIE generated alignment log"
     outputSource: bowtie_aligner/log_file
 
   iaintersect_log:
     type: File
     label: "Island intersect log"
-    format: "http://edamontology.org/format_3475"
     doc: "Iaintersect generated log"
     outputSource: island_intersect/log_file
 
   iaintersect_result:
     type: File
     label: "Island intersect results"
-    format: "http://edamontology.org/format_3475"
     doc: "Iaintersect generated results"
     outputSource: island_intersect/result_file
     "sd:visualPlugins":
@@ -269,14 +257,12 @@ outputs:
   atdp_log:
     type: File
     label: "ATDP log"
-    format: "http://edamontology.org/format_3475"
     doc: "Average Tag Density generated log"
     outputSource: average_tag_density/log_file
 
   atdp_result:
     type: File
     label: "ATDP results"
-    format: "http://edamontology.org/format_3475"
     doc: "Average Tag Density generated results"
     outputSource: average_tag_density/result_file
     "sd:visualPlugins":
@@ -292,7 +278,6 @@ outputs:
 
   bambai_pair:
     type: File
-    format: "http://edamontology.org/format_2572"
     label: "Coordinate sorted BAM alignment file (+index BAI)"
     doc: "Coordinate sorted BAM file and BAI index file"
     outputSource: samtools_remove_duplicates/deduplicated_bam_bai_pair
@@ -309,14 +294,12 @@ outputs:
   macs2_called_peaks:
     type: File
     label: "Called peaks"
-    format: "http://edamontology.org/format_3468"
     doc: "XLS file to include information about called peaks"
     outputSource: macs2_callpeak/peak_xls_file
 
   macs2_narrow_peaks:
     type: File
     label: "Narrow peaks"
-    format: "http://edamontology.org/format_3613"
     doc: "Contains the peak locations together with peak summit, pvalue and qvalue"
     outputSource: macs2_callpeak/narrow_peak_file
     "sd:visualPlugins":
@@ -331,28 +314,24 @@ outputs:
   macs2_peak_summits:
     type: File
     label: "Peak summits"
-    format: "http://edamontology.org/format_3003"
     doc: "Contains the peak summits locations for every peaks"
     outputSource: macs2_callpeak/peak_summits_file
 
   macs2_log:
     type: File
     label: "MACS2 log"
-    format: "http://edamontology.org/format_2330"
     doc: "MACS2 output log"
     outputSource: macs2_callpeak/macs_log
 
   get_stat_log:
     type: File?
     label: "YAML formatted combined log"
-    format: "http://edamontology.org/format_3750"
     doc: "YAML formatted combined log"
     outputSource: get_stat/collected_statistics_yaml
 
   get_stat_markdown:
     type: File?
     label: "Markdown formatted combined log"
-    format: "http://edamontology.org/format_3835"
     doc: "Markdown formatted combined log"
     outputSource: get_stat/collected_statistics_md
     "sd:visualPlugins":
@@ -362,7 +341,6 @@ outputs:
   get_stat_formatted_log:
     type: File?
     label: "Bowtie & Samtools Rmdup combined formatted log"
-    format: "http://edamontology.org/format_3475"
     doc: "Processed and combined Bowtie aligner and Samtools rmdup formatted log"
     outputSource: get_stat/collected_statistics_tsv
     "sd:visualPlugins":
@@ -378,21 +356,18 @@ outputs:
   bam_statistics_report:
     type: File
     label: "BAM statistics report (original)"
-    format: "http://edamontology.org/format_2330"
     doc: "BAM statistics report (right after alignment and sorting)"
     outputSource: get_bam_statistics/log_file
 
   bam_statistics_report_after_filtering:
     type: File
     label: "BAM statistics report (after filtering)"
-    format: "http://edamontology.org/format_2330"
     doc: "BAM statistics report (after all filters applied)"
     outputSource: get_bam_statistics_after_filtering/log_file
 
   insert_size_report_after_filtering:
     type: File
     label: "Insert size distribution report (after filtering)"
-    format: "http://edamontology.org/format_3475"
     doc: "Insert size distribution report (after all filters applied)"
     outputSource: get_bam_statistics_after_filtering/ext_is_section
     "sd:visualPlugins":
@@ -421,7 +396,6 @@ outputs:
   preseq_estimates_plot_data:
     type: File?
     label: "Preseq estimates"
-    format: "http://edamontology.org/format_3475"
     doc: "Preseq estimated results"
     outputSource: preseq_plot_data/estimates_file_plot_data
     "sd:visualPlugins":

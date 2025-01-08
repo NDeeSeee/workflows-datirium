@@ -20,10 +20,6 @@ requirements:
   genome_indices:
   - "genome-indices.cwl"
   - "https://github.com/datirium/workflows/workflows/genome-indices.cwl"
-  control_file:
-  - "trim-atacseq-se.cwl"
-  - "https://github.com/datirium/workflows/workflows/trim-atacseq-se.cwl"
-
 
 
 inputs:
@@ -53,15 +49,6 @@ inputs:
     label: "Chromosomes length file"
     format: "http://edamontology.org/format_2330"
     doc: "Chromosomes length file"
-
-  control_file:
-    type: File?
-    default: null
-    "sd:upstreamSource": "control_file/bambai_pair"
-    "sd:localLabel": true
-    label: "Use experiment as a control"
-    format: "http://edamontology.org/format_2572"
-    doc: "Use experiment as a control for MACS2 peak calling"
 
   fastq_file:
     type:
@@ -630,10 +617,6 @@ steps:
         default: 0
       extsize: exp_fragment_size
       q_value: peak_calling_fdr
-      control_file: control_file
-      nolambda:
-        source: control_file
-        valueFrom: $(!self)
       call_summits:
         default: true
       buffer_size:

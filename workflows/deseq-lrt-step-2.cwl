@@ -141,6 +141,12 @@ inputs:
     doc: "RDS file containing the contrasts list from step 1."
     "sd:upstreamSource": "deseq_lrt_step1/dsq_obj_data"
 
+  contrasts_table:
+    type: File
+    label: "Contrasts Table TSV File"
+    doc: "TSV file containing contrasts data"
+    "sd:upstreamSource": "deseq_lrt_step1/contrasts_table"
+
   batchcorrection:
     type: string
     label: "Batch Correction Method RDS File"
@@ -247,6 +253,7 @@ steps:
     run: ../tools/deseq-lrt-step-2.cwl
     in:
       dsq_obj_data: dsq_obj_data
+      contrasts_table: contrasts_table
       batchcorrection: batchcorrection
       contrast_indices: contrast_indices
       fdr_cutoff: fdr_cutoff

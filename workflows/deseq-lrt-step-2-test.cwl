@@ -40,6 +40,10 @@ inputs:
     type: File
     doc: "RDS file containing the contrasts list from step 1"
 
+  contrasts_table:
+    type: File
+    doc: "TSV file containing contrasts data"
+
   contrast_indices:
     type: string
     label: "Comma-separated list of integers representing contrast indices"
@@ -243,6 +247,7 @@ steps:
     run: ../tools/deseq-lrt-step-2.cwl
     in:
       dsq_obj_data: dsq_obj_data
+      contrasts_table: contrasts_table
       contrast_indices: contrast_indices
       fdr: fdr
       lfcthreshold: lfcthreshold

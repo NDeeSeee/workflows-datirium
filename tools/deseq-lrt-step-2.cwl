@@ -16,6 +16,11 @@ inputs:
       prefix: "--dsq_obj_data"
     doc: "RDS file containing the contrasts list from step 1"
 
+  contrasts_table:
+    type: File
+    inputBinding:
+      prefix: "--contrast_df"
+    doc: "TSV file containing contrasts data"
 
   batchcorrection:
     type: string

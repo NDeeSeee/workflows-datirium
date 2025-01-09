@@ -687,7 +687,7 @@ steps:
         default: "BED"
       genome_size: genome_size
       keep_dup:
-        default: "all"
+        default: "auto"
       nomodel:
         default: true
       shift:

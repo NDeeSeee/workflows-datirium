@@ -109,7 +109,7 @@ inputs:
     label: "Remove duplicates"
     doc: "Calls samtools rmdup to remove duplicates from sortesd BAM file"
 
-  peak_calling_fdr_:
+  peak_calling_fdr:
     type: float?
     default: 0.01
     "sd:layout":
@@ -694,7 +694,7 @@ steps:
       shift:
         default: 0
       extsize: exp_fragment_size
-      q_value: peak_calling_fdr_
+      q_value: peak_calling_fdr
       call_summits:
         default: true
       buffer_size:

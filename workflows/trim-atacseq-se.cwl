@@ -587,7 +587,8 @@ steps:
         default: "BED"
       genome_size: genome_size
       keep_dup:
-        default: "auto"
+        source: remove_duplicates
+        valueFrom: $(self?"all":"auto")
       nomodel:
         default: true
       shift:

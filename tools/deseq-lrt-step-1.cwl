@@ -130,7 +130,6 @@ inputs:
   output_prefix:
     type: string?
     inputBinding:
-      position: 10
       prefix: "--output"
     default: "./deseq_lrt_step_1"
     doc: "Output prefix for generated files"
@@ -138,15 +137,20 @@ inputs:
   threads:
     type: int?
     inputBinding:
-      position: 11
       prefix: "--threads"
     default: 1
     doc: "Number of threads"
 
+  lrt_only_mode:
+    type: boolean
+    inputBinding:
+      prefix: "--lrt_only_mode"
+    default: false
+    doc: "Run LRT only, no contrasts"
+
   test_mode:
     type: boolean
     inputBinding:
-      position: 12
       prefix: "--test_mode"
     default: false
     doc: "Run for test, only first 500 rows"
@@ -154,7 +158,7 @@ inputs:
 outputs:
 
   contrasts_table:
-    type: File
+    type: File?
     outputBinding:
       glob: "*_contrasts_table.tsv"
 

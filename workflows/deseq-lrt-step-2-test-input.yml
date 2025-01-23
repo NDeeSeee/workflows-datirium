@@ -1,6 +1,6 @@
 use_lfc_thresh: true
 threads: 1
-test_mode: true
+test_mode: false
 k_hopach: 3
 kmax_hopach: 5
 regulation: both

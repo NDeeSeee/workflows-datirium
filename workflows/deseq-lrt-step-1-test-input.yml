@@ -87,6 +87,7 @@ metadata_file:
 design_formula: "~condition*celltype"
 reduced_formula: "~condition+celltype"
 test_mode: true
+lrt_only_mode: true
 use_lfc_thresh: true
 threads: 6
 lfcthreshold: 0.59
@@ -95,5 +96,5 @@ fdr: 0.1
 cluster_method: "row"
 k_hopach: 3
 kmax_hopach: 5
-batchcorrection: "combatseq"
+batchcorrection: "limmaremovebatcheffect"
 alias: "AFOS_LRT_step_1_test"

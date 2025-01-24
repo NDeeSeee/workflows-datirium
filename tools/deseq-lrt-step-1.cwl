@@ -163,7 +163,7 @@ outputs:
       glob: "*_contrasts_table.tsv"
 
   dsq_obj_data:
-    type: File
+    type: File?
     outputBinding:
       glob: "*_contrasts.rds"
 

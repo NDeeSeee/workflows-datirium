@@ -157,10 +157,10 @@ inputs:
 
 outputs:
 
-  contrasts_table:
+  contrasts_table_optional:
     type: File?
     outputBinding:
-      glob: "*_contrasts_table.tsv"
+      glob: "*_contrasts_table_optional.tsv"
 
   dsq_obj_data:
     type: File?
